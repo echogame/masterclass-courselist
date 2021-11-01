@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import {RequestProvider} from 'react-request-hook';
+import axios from 'axios';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const axiosInstance = axios.create({
+  baseURL: 'https://mc-dev-5.herokuapp.com/',
+  headers: {
+    'Content-Type': 'application/json'
+  }
+});
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <RequestProvider value={axiosInstance}>
+      <App />
+    </RequestProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

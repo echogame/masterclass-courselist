@@ -15,6 +15,10 @@ import './App.css';
 import Courses from './Courses/Courses';
 
 function App() {
+  const CURRENT_USER = {
+    email: 'yinneh@gmail.com'
+  };
+  
   return (
     <div className="App">
       <Router>
@@ -29,7 +33,7 @@ function App() {
         <div className="App_content">
           <Switch>
             <Route path="/courses">
-              <Courses />
+              <Courses user={CURRENT_USER}/>
             </Route>
 
             {/* Always go to /courses page */}
