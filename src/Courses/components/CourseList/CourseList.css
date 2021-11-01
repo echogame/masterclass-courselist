@@ -1,0 +1,13 @@
+.CourseList__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.CourseList__listItem {
+  margin: 0;
+  padding: 0;
+  width: 33%;
+}

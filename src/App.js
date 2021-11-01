@@ -23,8 +23,9 @@ function App() {
     <div className="App">
       <Router>
         <div className="App_navigation">
-          <ul>
-            <li>
+          <span className="App_navigation__title">Nav:</span>
+          <ul className="App_navigation__list">
+            <li className="App_navigation__listItem">
               <Link to="/courses">Courses</Link>
             </li>
           </ul>

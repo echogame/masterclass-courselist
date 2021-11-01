@@ -2,6 +2,9 @@
 import React from "react";
 import { useResource } from "react-request-hook";
 
+// Components
+import CourseList from './components/CourseList/CourseList'
+
 // Styles
 import './Courses.css';
 
@@ -20,13 +23,15 @@ function Courses({user = {}}) {
 
   return (
     <div>
-      <div>Hello from courses</div>
-      <div>user email: {user.email}</div>
       <div className="Courses_pagination">
         [placeholder for pagination]
       </div>
       <div className="Courses_courseList">
-        total courses: {courseList.isLoading ? 'loading....' : courseList.data.length}
+        {
+          courseList.isLoading 
+          ? <div>Loading courses.... </div>
+          : <><CourseList courses={courseList.data} /></>
+        }
       </div>
     </div>
   )
