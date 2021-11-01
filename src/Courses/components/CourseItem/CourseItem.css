@@ -1,0 +1,18 @@
+.CourseItem {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+}
+
+.CourseItem__thumbnail > img {
+  max-height: 100px;
+  max-width: 100px;
+}
+
+.CourseItem__favorite {
+  color: #ccc;
+}
+
+.CourseItem__favorite__fave {
+  color: #f00;
+}
