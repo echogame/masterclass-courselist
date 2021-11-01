@@ -2,6 +2,7 @@
   border: 1px solid #ccc;
   margin: 10px;
   padding: 10px;
+  border-radius: 3px;
 }
 
 .CourseItem__thumbnail > img {
@@ -9,7 +10,20 @@
   max-width: 100px;
 }
 
-.CourseItem__favorite {
+.CourseItem__favorite__fave, 
+.CourseItem__favorite__notfave {
+  font-size: 1.5em;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background: none;
+  cursor: pointer;
+}
+.CourseItem__favorite__fave:hover, 
+.CourseItem__favorite__notfave:hover {
+  border: 1px solid #eee;
+}
+
+
+.CourseItem__favorite__notfave {
   color: #ccc;
 }
 
